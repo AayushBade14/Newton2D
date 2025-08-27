@@ -6,6 +6,8 @@
 
 #include <Window/Window.h>
 
+#include <Newton2D/Physics/Particle.h>
+
 namespace GravitySim {
   void Run();
 }
