@@ -2,6 +2,8 @@
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <Newton2D/Core/Primitives.h>
+#include <vector>
 
 namespace OGL {
   bool Init();
@@ -28,4 +30,8 @@ namespace OGL {
   //void SetBlendFunction(GLenum src, GLenum dst);
 
   void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+
+  std::vector<float> BuildCircleVertices(const Circle& c, int segments = 36);
+  std::vector<float> BuildRectangleVertices(const Rectangle& r);
+  std::vector<float> BuildTriangleVertices(const Triangle& t);
 }
