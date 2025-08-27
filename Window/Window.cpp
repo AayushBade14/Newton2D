@@ -41,4 +41,6 @@ namespace Window {
   void MakeContextCurrent(){glfwMakeContextCurrent(mWindow);}  
   void DestroyWindow(){glfwDestroyWindow(mWindow);}
   void TerminateGLFW(){glfwTerminate();}
+  
+  void SetFramebufferSizeCallback(void (*ptr)(GLwindow*, int, int)){glfwSetFramebufferSizeCallback(mWindow, ptr);}
 }

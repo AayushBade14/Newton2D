@@ -21,4 +21,6 @@ namespace Window {
 
   void DestroyWindow();
   void TerminateGLFW();
+
+  void SetFrameBufferSizeCallback(void (*ptr)(GLFWwindow*, int, int));
 }
