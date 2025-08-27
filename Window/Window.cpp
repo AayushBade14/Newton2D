@@ -34,7 +34,8 @@ namespace Window {
   void* GetWindowPointer(){return mWindow;}  
   int GetWindowWidth(){return mWidth;}
   int GetWindowHeight(){return mHeight;}
-  const std::string& GetWindowTitle() const{return mTitle;}
+  const std::string& GetWindowTitle(){return mTitle;}
+  bool GetWindowShouldClose(){return glfwWindowShouldClose(mWindow);}
 
   void PollEvents(){glfwPollEvents();}
   void SwapBuffers(){glfwSwapBuffers(mWindow);}
@@ -42,5 +43,5 @@ namespace Window {
   void DestroyWindow(){glfwDestroyWindow(mWindow);}
   void TerminateGLFW(){glfwTerminate();}
   
-  void SetFramebufferSizeCallback(void (*ptr)(GLwindow*, int, int)){glfwSetFramebufferSizeCallback(mWindow, ptr);}
+  void SetFramebufferSizeCallback(void (*ptr)(GLFWwindow*, int, int)){glfwSetFramebufferSizeCallback(mWindow, ptr);}
 }

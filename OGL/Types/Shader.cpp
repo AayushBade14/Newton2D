@@ -19,7 +19,7 @@ namespace OGL {
     glUseProgram(mId);
   }
 
-  void Shader::LoadFile(const std::string& path){
+  std::string Shader::LoadFile(const std::string& path){
     std::string code;
     std::ifstream file;
 
@@ -76,7 +76,7 @@ namespace OGL {
     return shader;
   }
 
-  void CreateShaderProgram(unsigned int& vert, unsigned int& frag){
+  void Shader::CreateShaderProgram(unsigned int& vert, unsigned int& frag){
     int success;
     char infoLog[512];
 

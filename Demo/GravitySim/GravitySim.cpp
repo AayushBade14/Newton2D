@@ -21,7 +21,7 @@ namespace GravitySim {
 
     OGL::Mesh object(OGL::BuildCircleVertices(circle, 36));
     
-    Shader shader("./vert.glsl","./frag.glsl");
+    OGL::Shader shader("../Demo/GravitySim/vert.glsl","../Demo/GravitySim/frag.glsl");
 
     Window::SetFramebufferSizeCallback(OGL::framebuffer_size_callback);
 

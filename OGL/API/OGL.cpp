@@ -26,7 +26,7 @@ namespace OGL {
     glViewport(0, 0, width, height);
   }
 
-  std::vector<float> BuildCircleVertices(const Circle& c, int segments){
+  std::vector<float> BuildCircleVertices(const Newton2D::Circle& c, int segments){
     std::vector<float> circle;
     const float PI = 3.141f;
     const float TWO_PI = 2*PI;
@@ -53,7 +53,7 @@ namespace OGL {
     return circle;
   } 
 
-  std::vector<float> BuildRectangleVertices(const Rectangle& r){
+  std::vector<float> BuildRectangleVertices(const Newton2D::Rectangle& r){
     std::vector<float> rect;
 
     rect.push_back(r.mOrigin.x);
@@ -83,7 +83,7 @@ namespace OGL {
     return rect;
   }
 
-  std::vector<float> BuildTriangleVertices(const Triangle& t){
+  std::vector<float> BuildTriangleVertices(const Newton2D::Triangle& t){
     std::vector<float> tri;
 
     tri.push_back(t.mP1.x);
@@ -97,5 +97,7 @@ namespace OGL {
     tri.push_back(t.mP3.x);
     tri.push_back(t.mP3.y);
     tri.push_back(t.mP3.z);
+
+    return tri;
   }
 }

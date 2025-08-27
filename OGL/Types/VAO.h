@@ -1,6 +1,6 @@
 #pragma once
 
-#include <OGL/Types/VAO.h>
+#include <OGL/API/OGL.h>
 
 namespace OGL {
   class VAO{

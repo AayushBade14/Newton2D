@@ -2,6 +2,7 @@
 
 #include <GLFW/glfw3.h>
 #include <string>
+#include <iostream>
 
 namespace Window {
 
@@ -12,7 +13,7 @@ namespace Window {
 
   int GetWindowWidth();
   int GetWindowHeight();
-  const std::string& GetWindowTitle() const;
+  const std::string& GetWindowTitle();
 
   void PollEvents();
   void SwapBuffers();
@@ -22,5 +23,5 @@ namespace Window {
   void DestroyWindow();
   void TerminateGLFW();
 
-  void SetFrameBufferSizeCallback(void (*ptr)(GLFWwindow*, int, int));
+  void SetFramebufferSizeCallback(void (*ptr)(GLFWwindow*, int, int));
 }

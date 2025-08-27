@@ -31,7 +31,7 @@ namespace OGL {
 
   void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
-  std::vector<float> BuildCircleVertices(const Circle& c, int segments = 36);
-  std::vector<float> BuildRectangleVertices(const Rectangle& r);
-  std::vector<float> BuildTriangleVertices(const Triangle& t);
+  std::vector<float> BuildCircleVertices(const Newton2D::Circle& c, int segments = 36);
+  std::vector<float> BuildRectangleVertices(const Newton2D::Rectangle& r);
+  std::vector<float> BuildTriangleVertices(const Newton2D::Triangle& t);
 }
